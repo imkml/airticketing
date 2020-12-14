@@ -1,6 +1,4 @@
 
-
-<div class="animsition">
 	<div class="page-wrapper">
 		<!-- HEADER MOBILE-->
 		<header class="header-mobile d-block d-lg-none">
@@ -156,4 +154,3 @@
 			<!-- END PAGE CONTAINER-->
 		</div>
 	</div>
-</div>

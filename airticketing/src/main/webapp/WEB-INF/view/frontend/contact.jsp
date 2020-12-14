@@ -1,24 +1,23 @@
-<%@ page language="java" contentType="text/html; charset=ISO-8859-1"
-	pageEncoding="ISO-8859-1"%>
-<!DOCTYPE html>
-<html>
-<head>
-<meta charset="ISO-8859-1">
-<title>Insert title here</title>
-</head>
-<body>
+<div class="page-content--bge5">
+	<div
+		style="background-image:url('${images}/background.jpg');width:1550px;height:800px;position:sticky">
 	<div class="container">
+
 		<br> <br>
 
 		<h2>Contact Us</h2>
 		<hr />
-
+		<div><br></div>
+		<div><br></div>
+		
+		<div><br></div>
+		<div><br></div>
 		<div align="center">
 			<h4>ADDRESS</h4>
 
 		</div>
 		<div align="center">
-			<p>V-Travel Inc.</p>
+			<p>Fly High Inc.</p>
 		
 			<p>1481 Creekside Lane Avila Beach, Mumbai 93424</p>
 		</div>
@@ -37,10 +36,8 @@
 
 		</div>
 		<div align="center">
-			<p>customerhelpline@vtravel.com</p>
+			<p>flyhigh@vtravel.com</p>
 		</div>
 
-	</div>
-	<div class="container"></div>
-</body>
-</html>
+	</div></div>
+</div>

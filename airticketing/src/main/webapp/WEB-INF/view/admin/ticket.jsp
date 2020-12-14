@@ -1,4 +1,4 @@
-<div class="animsition">
+
 <div class="page-wrapper">
    
     <!-- PAGE CONTAINER-->

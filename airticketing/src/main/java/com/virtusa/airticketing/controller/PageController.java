@@ -8,23 +8,15 @@ import org.springframework.web.servlet.ModelAndView;
 public class PageController {
 	@RequestMapping(value = { "/", "/home", "/index" })
 	public ModelAndView index() {
-		ModelAndView mv = new ModelAndView("page");
+		ModelAndView mv = new ModelAndView("/frontend/page");
 		mv.addObject("title", "Home");
 		mv.addObject("userClickHome", true);
 		return mv;
 	}
 
-	@RequestMapping(value = "/about")
-	public ModelAndView about() {
-		ModelAndView mv = new ModelAndView("page");
-		mv.addObject("title", "About Us");
-		mv.addObject("userClickAbout", true);
-		return mv;
-	}
-
 	@RequestMapping(value = "/contact")
 	public ModelAndView contact() {
-		ModelAndView mv = new ModelAndView("page");
+		ModelAndView mv = new ModelAndView("/frontend/page");
 		mv.addObject("title", "Contact Us");
 		mv.addObject("userClickContact", true);
 		return mv;
@@ -32,7 +24,7 @@ public class PageController {
 
 	@RequestMapping(value = "/login")
 	public ModelAndView login() {
-		ModelAndView mv = new ModelAndView("page");
+		ModelAndView mv = new ModelAndView("/frontend/page");
 		mv.addObject("title", "Login");
 		mv.addObject("userClickLogin", true);
 		return mv;
@@ -40,7 +32,7 @@ public class PageController {
 
 	@RequestMapping(value = "/signup")
 	public ModelAndView signup() {
-		ModelAndView mv = new ModelAndView("page");
+		ModelAndView mv = new ModelAndView("/frontend/page");
 		mv.addObject("title", "SignUp");
 		mv.addObject("userClickSignUp", true);
 		return mv;
@@ -48,7 +40,7 @@ public class PageController {
 
 	@RequestMapping(value = "/forget")
 	public ModelAndView forget() {
-		ModelAndView mv = new ModelAndView("page");
+		ModelAndView mv = new ModelAndView("/frontend/page");
 		mv.addObject("title", "Forget Password");
 		mv.addObject("userClickForget", true);
 		return mv;
@@ -56,11 +48,37 @@ public class PageController {
 
 	@RequestMapping(value = "/admin")
 	public ModelAndView admin() {
-		ModelAndView mv = new ModelAndView("page");
+		ModelAndView mv = new ModelAndView("/frontend/page");
 		mv.addObject("title", "AdminHome");
 		mv.addObject("userClickAdmin", true);
 		return mv;
 	}
+
+	@RequestMapping(value = "/userDashboard")
+	public ModelAndView userDashboard() {
+		ModelAndView mv = new ModelAndView("/user/user");
+		mv.addObject("title", "User Dashboard");
+		mv.addObject("userClickDashboard", true);
+		return mv;
+	}
+
+	@RequestMapping(value = "/ticketBooking")
+	public ModelAndView ticketBooking() {
+		ModelAndView mv = new ModelAndView("/user/user");
+		mv.addObject("title", "Ticket Booking");
+		mv.addObject("userClickTicketBooking", true);
+		return mv;
+	}
+
+	@RequestMapping(value = "/bookingHistory")
+	public ModelAndView bookedTicket() {
+		ModelAndView mv = new ModelAndView("/user/user");
+		mv.addObject("title", "Booking History");
+		mv.addObject("userClickBookingHistory", true);
+		return mv;
+	}
+
+	// Admin mapping
 
 	@RequestMapping(value = "/dashboard")
 	public ModelAndView dashboard() {

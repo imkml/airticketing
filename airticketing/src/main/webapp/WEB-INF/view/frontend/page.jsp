@@ -20,7 +20,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 
-<title>FlyHigh-${title}</title>
+<title>Fly High-${title}</title>
 
 <link href="https://fonts.googleapis.com/css?family=Lato:400,700"
 	rel="stylesheet">
@@ -39,8 +39,7 @@
 	media="all">
 
 <!-- Vendor CSS-->
-<link href="${vendor}/animsition/animsition.min.css" rel="stylesheet"
-	media="all">
+ <link href="${vendor}/animsition/animsition.min.css" rel="stylesheet" media="all">  
 <link
 	href="${vendor}/bootstrap-progressbar/bootstrap-progressbar-3.3.4.min.css"
 	rel="stylesheet" media="all">
@@ -58,88 +57,73 @@
 
 </head>
 
+
 <body>
 	<div class="wrapper">
-
+		<!--Header-->
+		<%@include file="header.jsp"%>
+		<!-- Home section included -->
 		<div class="content">
-
-			<!-- Home section included -->
-			<!--Header-->
-			<%@include file="../shared/admin_header.jsp"%>
-			<!-- 		<!-- mobile header -->
-			-->
-			<%-- 		<%@include file="../shared/admin_mobileHeader.jsp"%> --%>
-
-			<!--Sidebar -->
-			<%@include file="../shared/admin_sidebar.jsp"%>
-
-			<!-- load only when admin click dashboard -->
-			<c:if test="${adminClickHome==true}">
-				<%@include file="dashboard.jsp"%>
+			<c:if test="${userClickHome==true}">
+				<%@include file="home.jsp"%>
 			</c:if>
 
-			<!-- load only when admin click Fare -->
-			<c:if test="${adminClickFares==true}">
-				<%@include file="fare.jsp"%>
+			<!-- load only when user click contact -->
+			<c:if test="${userClickContact==true}">
+				<%@include file="contact.jsp"%>
 			</c:if>
 
-			<!-- load only when admin click Flight -->
-			<c:if test="${adminClickFlights==true}">
-				<%@include file="flight.jsp"%>
+			<!-- load only when user click login -->
+			<c:if test="${userClickLogin==true}">
+				<%@include file="login.jsp"%>
 			</c:if>
 
-			<!-- load only when admin click User -->
-			<c:if test="${adminClickUsers==true}">
-				<%@include file="user.jsp"%>
+			<!-- load only for forget password -->
+			<c:if test="${userClickForget==true}">
+				<%@include file="forgetpassword.jsp"%>
 			</c:if>
 
-			<!-- load only when admin click Schedules -->
-			<c:if test="${adminClickSchedules==true}">
-				<%@include file="schedule.jsp"%>
+			<!-- load only when user click signup -->
+			<c:if test="${userClickSignUp==true}">
+				<%@include file="signup.jsp"%>
+			</c:if>
+			<!-- load only when user click admin -->
+			<c:if test="${userClickAdmin==true}">
+				<%@include file="adminlogin.jsp"%>
 			</c:if>
 
-
-			<!-- load only when admin click Tickets -->
-			<c:if test="${adminClickTickets==true}">
-				<%@include file="ticket.jsp"%>
-			</c:if>
-
+			
+</div>
 		</div>
 
-
-	</div>
-	<!-- Jquery JS-->
-	<script src="${vendor}/jquery-3.2.1.min.js"></script>
+		<!-- Jquery JS-->
+		<script src="${vendor}/jquery-3.2.1.min.js"></script>
 
 
-	<!-- Bootstrap JS-->
-	<script src="${vendor}/bootstrap-4.1/popper.min.js"></script>
-	<script src="${vendor}/bootstrap-4.1/bootstrap.min.js"></script>
+		<!-- Bootstrap JS-->
+		<script src="${vendor}/bootstrap-4.1/popper.min.js"></script>
+		<script src="${vendor}/bootstrap-4.1/bootstrap.min.js"></script>
 
 
-	<!-- Vendor JS       -->
-	<script src="${vendor}/slick/slick.min.js">
-		
-	</script>
-	<script src="${vendor}/wow/wow.min.js"></script>
-	<script src="${vendor}/animsition/animsition.min.js"></script>
-	<script
-		src="${vendor}/bootstrap-progressbar/bootstrap-progressbar.min.js">
-		
-	</script>
-	<script src="${vendor}/counter-up/jquery.waypoints.min.js"></script>
-	<script src="${vendor}/counter-up/jquery.counterup.min.js">
-		
-	</script>
-	<script src="${vendor}/circle-progress/circle-progress.min.js"></script>
-	<script src="${vendor}/perfect-scrollbar/perfect-scrollbar.js"></script>
-	<script src="${vendor}/chartjs/Chart.bundle.min.js"></script>
-	<script src="${vendor}/select2/select2.min.js">
-		
-	</script>
-
-
-
-	</div>
+		<!-- Vendor JS       -->
+		<script src="${vendor}/slick/slick.min.js">
+			
+		</script>
+		<script src="${vendor}/wow/wow.min.js"></script>
+		<script src="${vendor}/animsition/animsition.min.js"></script>
+		<script
+			src="${vendor}/bootstrap-progressbar/bootstrap-progressbar.min.js">
+			
+		</script>
+		<script src="${vendor}/counter-up/jquery.waypoints.min.js"></script>
+		<script src="${vendor}/counter-up/jquery.counterup.min.js">
+			
+		</script>
+		<script src="${vendor}/circle-progress/circle-progress.min.js"></script>
+		<script src="${vendor}/perfect-scrollbar/perfect-scrollbar.js"></script>
+		<script src="${vendor}/chartjs/Chart.bundle.min.js"></script>
+		<script src="${vendor}/select2/select2.min.js">
+			
+		</script>
 </body>
 </html>

@@ -1,10 +1,11 @@
-<div class="animsition">
-	<div class="page-wrapper">
+
 		<div class="page-content--bge5">
+		<div
+		style="background-image:url('${images}/background.jpg');width:1550px;height:800px;position:sticky">
 			<div class="container">
 				<div class="login-wrap">
 					<div class="login-content">
-						
+
 						<div class="login-form">
 							<form action="" method="post">
 								<div class="form-group">
@@ -21,4 +22,4 @@
 			</div>
 		</div>
 	</div>
-</div>
+
